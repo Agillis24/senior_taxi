@@ -52,7 +52,7 @@ export function Header() {
             </div>
             <div>
               <h1 className="font-bold text-xl">Senior Taxi Slezsko</h1>
-              <p className="text-xs text-gray-600">Pohodlnná přeprava seniorů</p>
+              <p className="text-xs text-gray-600">Pohodlná přeprava seniorů</p>
             </div>
           </div>
 
