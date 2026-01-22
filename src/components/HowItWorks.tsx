@@ -1,28 +1,28 @@
 export function HowItWorks() {
   const steps = [
     {
-      title: 'Senior si objedná jízdu',
-      description: 'Telefonicky nebo přes rodinu',
+      title: 'Objednáte jízdu',
+      description: 'Telefonicky vy nebo rodina – domluvíme čas i místo.',
     },
     {
-      title: 'Řidič ve sjednaný čas přijede',
-      description: 'Včas a na domluvené místo',
+      title: 'Řidič přijede včas',
+      description: 'Na domluvené místo, bez zbytečného čekání.',
     },
     {
-      title: 'Jízdu je možné v GPS sledovat',
-      description: 'Průběžné sledování trasy',
+      title: 'Sledování jízdy v GPS',
+      description: 'Objednatel má k dispozici všechny jízdy ke sledování.',
     },
     {
-      title: 'Senior zaplatí drobný poplatek',
-      description: 'Hotově nebo kartou',
+      title: 'Drobné doplatky snadno',
+      description: 'Hotově nebo kartou – jednoduše a bezpečně.',
     },
     {
-      title: 'Jízda se zaznamená do el. knihy',
-      description: 'Automatické vedení evidence',
+      title: 'Automatická evidence jízd',
+      description: 'Každá jízda se uloží do elektronické knihy.',
     },
     {
-      title: 'Jednou měsíčně se fakturuje',
-      description: 'Přehledné vyúčtování objednateli',
+      title: 'Měsíční fakturace',
+      description: 'Přehledné vyúčtování pro objednatele (instituci).',
     },
   ];
 
@@ -31,7 +31,7 @@ export function HowItWorks() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Jak to funguje
+            Jak senior taxi funguje?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Jednoduchý proces od objednávky po vyúčtování
