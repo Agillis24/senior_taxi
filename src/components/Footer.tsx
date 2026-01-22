@@ -9,16 +9,13 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Firma + identifikace */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white text-xl font-bold">ST</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-xl">Autodoprava Luzar s.r.o.</h3>
-                <p className="text-sm text-gray-400">Sídlo: Krůčkova 359/7, Svinov, 721 00 Ostrava</p>
-                <p className="text-sm text-gray-400">IČO: 22241833</p>
-                <p className="text-sm text-gray-400">DIČ: CZ22241833</p>
-              </div>
+            <div className="mb-4">
+              <h3 className="font-bold text-xl">Autodoprava Luzar s.r.o.</h3>
+              <p className="text-sm text-gray-400">
+                Sídlo: Krůčkova 359/7, Svinov, 721 00 Ostrava
+              </p>
+              <p className="text-sm text-gray-400">IČO: 22241833</p>
+              <p className="text-sm text-gray-400">DIČ: CZ22241833</p>
             </div>
 
             <p className="text-gray-400 mb-4">
