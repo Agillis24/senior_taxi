@@ -31,11 +31,11 @@ export function Hero() {
             </p>
 
             <a
-              href="mailto:info@seniortaxi.cz"
+              href="mailto:info@seniortaxiostrava.cz"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-12 py-5 rounded-lg hover:bg-blue-700 transition gap-3 text-lg font-semibold shadow-lg"
             >
               <Mail size={24} />
-              info@seniortaxi.cz
+              info@seniortaxiostrava.cz
             </a>
           </div>
         </div>
