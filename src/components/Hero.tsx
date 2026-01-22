@@ -3,8 +3,8 @@ import heroImage from "../assets/hero.png";
 
 export function Hero() {
   return (
-    <section className="relative bg-white py-20">
-      <div className="container mx-auto px-4">
+    <section className="relative bg-white min-h-[100svh] flex items-center">
+      <div className="container mx-auto px-4 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Levá část s textem */}
           <div>
@@ -24,11 +24,11 @@ export function Hero() {
           </div>
 
           {/* Pravá část s obrázkem */}
-          <div className="relative w-full rounded-2xl overflow-hidden bg-white aspect-[1920/1080] md:aspect-auto md:min-h-[420px]">
+          <div className="relative w-full rounded-2xl overflow-hidden bg-white">
             <img
               src={heroImage}
               alt="Senior Taxi"
-              className="w-full h-full object-contain"
+              className="w-full max-h-[80svh] object-contain"
               loading="eager"
             />
           </div>
