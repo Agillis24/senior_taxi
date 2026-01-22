@@ -18,7 +18,7 @@ export function Contact() {
             <p className="text-blue-100 mb-6 text-lg">Odpovíme do 24 hodin</p>
 
             <a
-              href="mailto:info@seniortaxi.cz"
+              href="mailto:info@seniortaxiostrava.cz"
               className="inline-flex items-center justify-center bg-white text-blue-600 px-10 py-4 rounded-lg hover:bg-gray-100 transition gap-3 font-bold text-lg shadow-lg"
             >
               <Mail size={24} />
