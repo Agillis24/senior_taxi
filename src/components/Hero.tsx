@@ -24,13 +24,15 @@ export function Hero() {
           </div>
 
           {/* Pravá část s obrázkem */}
-          <div className="relative h-[500px] bg-white rounded-2xl overflow-hidden">
-            <img
-              src={heroImage}
-              alt="Senior Taxi"
-              className="w-full h-full object-cover object-center"
-              loading="eager"
-            />
+          <div className="relative w-full rounded-2xl overflow-hidden bg-white">
+            <div className="w-full aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
+              <img
+                src={heroImage}
+                alt="Senior Taxi"
+                className="w-full h-full object-contain object-right"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </div>
