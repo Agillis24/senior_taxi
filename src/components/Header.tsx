@@ -82,11 +82,11 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="mailto:info@seniortaxi.cz"
+              href="mailto:info@seniortaxiostrava.cz"
               className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
             >
               <Mail size={18} />
-              <span>info@seniortaxi.cz</span>
+              <span>info@seniortaxiostrava.cz</span>
             </a>
           </div>
 
@@ -123,11 +123,11 @@ export function Header() {
                 Kontakt
               </button>
               <a
-                href="mailto:info@seniortaxi.cz"
+                href="mailto:info@seniortaxiostrava.cz"
                 className="flex items-center gap-2 text-blue-600"
               >
                 <Mail size={18} />
-                <span>info@seniortaxi.cz</span>
+                <span>info@seniortaxiostrava.cz</span>
               </a>
             </div>
           </nav>
