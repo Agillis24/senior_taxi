@@ -1,8 +1,8 @@
 export function Clients() {
   const clients = [
-    { name: "Město Valašské Meziříčí", logo: new URL("../assets/poruba.png", import.meta.url).href },
-    { name: "Centrum sociálních služeb Jih", logo: new URL("../assets/jih.png", import.meta.url).href },
-    { name: "Městský obvod Ostrava - Poruba", logo: new URL("../assets/valmez.png", import.meta.url).href },
+    { name: "Město Valašské Meziříčí", logo: new URL("src/assets/poruba.png", import.meta.url).href },
+    { name: "Centrum sociálních služeb Jih", logo: new URL("src/assets/jih.png", import.meta.url).href },
+    { name: "Městský obvod Ostrava - Poruba", logo: new URL("src/assets/valmez.png", import.meta.url).href },
   ];
 
   return (
