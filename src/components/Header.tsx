@@ -1,4 +1,4 @@
-import { Phone, Menu, X } from "lucide-react";
+import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export function Header() {
@@ -83,8 +83,8 @@ export function Header() {
               href="tel:+420123456789"
               className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
             >
-              <Phone size={18} />
-              <span>+420 123 456 789</span>
+              <Mail size={18} />
+              <span>info@seniortaxi.cz</span>
             </a>
           </div>
 
