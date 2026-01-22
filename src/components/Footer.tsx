@@ -20,7 +20,7 @@ export function Footer() {
 
             <p className="text-gray-400 mb-4">
               Profesionální dopravní služby pro seniory s důrazem na bezpečnost,
-              pohodlí a lidský přístup. Využíváme moderní technologie pro vaši bezpečnost.
+              pohodlí a lidský přístup.
             </p>
           </div>
 
