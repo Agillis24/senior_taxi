@@ -3,7 +3,7 @@ export function Clients() {
     {
       name: "Město Valašské Meziříčí",
       logo: new URL("../assets/valmez.png", import.meta.url).href,
-      phone: "+420 123 456 789",
+      phone: "+420 775 896 947",
     },
     {
       name: "Centrum sociálních služeb Jih",
@@ -12,7 +12,7 @@ export function Clients() {
     {
       name: "Městský obvod Ostrava - Poruba",
       logo: new URL("../assets/poruba.png", import.meta.url).href,
-      phone: "+420 123 456 789",
+      phone: "+420 602 872 003",
     },
   ];
 
