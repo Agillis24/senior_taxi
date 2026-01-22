@@ -11,7 +11,7 @@ export function Hero() {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               SENIOR TAXI SLEZSKO
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
             </p>
             <a
