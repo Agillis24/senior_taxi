@@ -52,8 +52,8 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
-                <a href="mailto:info@seniortaxi.cz" className="hover:text-white transition">
-                  info@seniortaxi.cz
+                <a href="mailto:info@seniortaxiostrava.cz" className="hover:text-white transition">
+                  info@seniortaxiostrava.cz
                 </a>
               </li>
               <li className="flex items-start gap-2 text-gray-400">
