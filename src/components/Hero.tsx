@@ -12,7 +12,7 @@ export function Hero() {
               SENIOR TAXI SLEZSKO
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              Bezpečná a pohodlná přeprava seniorů s osobním přístupem
+              Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
             </p>
             <a
               href="tel:+420123456789"
