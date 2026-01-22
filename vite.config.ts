@@ -4,7 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
-  base: '/senior_taxi/',  // <-- přidej tento řádek
+  base: '/senior_taxi/',
   plugins: [react()],,
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
