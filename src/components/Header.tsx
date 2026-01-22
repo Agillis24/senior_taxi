@@ -73,6 +73,12 @@ export function Header() {
               Služby
             </button>
             <button
+              onClick={() => scrollToSection("klienti")}
+              className="text-gray-700 hover:text-blue-600 transition"
+            >
+              Klienti
+            </button>
+            <button
               onClick={() => scrollToSection("kontakt")}
               className="text-gray-700 hover:text-blue-600 transition"
             >
@@ -115,6 +121,12 @@ export function Header() {
                 className="text-gray-700 hover:text-blue-600 transition text-left"
               >
                 Služby
+              </button>
+              <button
+                onClick={() => scrollToSection("klienti")}
+                className="text-gray-700 hover:text-blue-600 transition text-left"
+              >
+                Klienti
               </button>
               <button
                 onClick={() => scrollToSection("kontakt")}
