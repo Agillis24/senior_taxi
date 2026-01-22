@@ -1,11 +1,3 @@
 
-  # Senior Taxi Service Website
-
-  This is a code bundle for Senior Taxi Service Website. 
-
-  ## Running the code
-
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+  # Senior Taxi Slezsko | Pohodlná přeprava seniorů
+  Budujeme spolehlivou dopravu pro seniory s důrazem na bezpečí a lidský přístup.  
