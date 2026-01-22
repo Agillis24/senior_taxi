@@ -1,7 +1,7 @@
 export function HowItWorks() {
   const steps = [
     {
-      title: 'Objednáte jízdu',
+      title: 'Zákazník objedná jízdu',
       description: 'Telefonicky vy nebo rodina – domluvíme čas i místo.',
     },
     {
@@ -10,7 +10,7 @@ export function HowItWorks() {
     },
     {
       title: 'Sledování jízdy v GPS',
-      description: 'Objednatel má k dispozici všechny jízdy ke sledování.',
+      description: 'Objednatel (instituce) má k dispozici všechny jízdy ke sledování.',
     },
     {
       title: 'Drobné doplatky snadno',
