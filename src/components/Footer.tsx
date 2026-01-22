@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,19 +7,22 @@ export function Footer() {
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Logo a popis */}
+          {/* Firma + identifikace */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white text-xl font-bold">ST</span>
               </div>
               <div>
-                <h3 className="font-bold text-xl">Senior Taxi</h3>
-                <p className="text-sm text-gray-400">Doprava pro seniory</p>
+                <h3 className="font-bold text-xl">Autodoprava Luzar s.r.o.</h3>
+                <p className="text-sm text-gray-400">Sídlo: Krůčkova 359/7, Svinov, 721 00 Ostrava</p>
+                <p className="text-sm text-gray-400">IČO: 22241833</p>
+                <p className="text-sm text-gray-400">DIČ: CZ22241833</p>
               </div>
             </div>
+
             <p className="text-gray-400 mb-4">
-              Profesionální dopravní služby pro seniory s důrazem na bezpečnost, 
+              Profesionální dopravní služby pro seniory s důrazem na bezpečnost,
               pohodlí a lidský přístup. Využíváme moderní technologie pro vaši bezpečnost.
             </p>
           </div>
@@ -51,12 +54,6 @@ export function Footer() {
             <h4 className="font-bold mb-4">Kontakt</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-400">
-                <Phone size={16} />
-                <a href="tel:+420123456789" className="hover:text-white transition">
-                  +420 123 456 789
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
                 <a href="mailto:info@seniortaxi.cz" className="hover:text-white transition">
                   info@seniortaxi.cz
@@ -73,16 +70,8 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Senior Taxi. Všechna práva vyhrazena.
+              © {currentYear} Autodoprava Luzar s.r.o. Všechna práva vyhrazena.
             </p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                Ochrana osobních údajů
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                Obchodní podmínky
-              </a>
-            </div>
           </div>
         </div>
       </div>
