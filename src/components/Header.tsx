@@ -1,5 +1,6 @@
 import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import logo from "../assets/logo.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,7 +35,6 @@ export function Header() {
     };
   }, []);
 
-  // když se otevře/zavře mobile menu, výška headeru se změní
   useEffect(() => {
     const el = headerRef.current;
     if (!el) return;
@@ -46,10 +46,12 @@ export function Header() {
     <header ref={headerRef} className="sticky top-0 bg-white shadow-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-xl font-bold">ST</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="Logo Senior Taxi"
+              className="w-10 h-10 rounded-lg object-contain"
+            />
             <div>
               <h1 className="font-bold text-xl">Senior Taxi Slezsko</h1>
               <p className="text-xs text-gray-600">Pohodlná přeprava seniorů</p>
@@ -92,6 +94,7 @@ export function Header() {
           <button
             className="md:hidden text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -119,8 +122,11 @@ export function Header() {
               >
                 Kontakt
               </button>
-              <a href="mailto:info@seniortaxi.cz" className="flex items-center gap-2 text-blue-600">
-                <Phone size={18} />
+              <a
+                href="mailto:info@seniortaxi.cz"
+                className="flex items-center gap-2 text-blue-600"
+              >
+                <Mail size={18} />
                 <span>info@seniortaxi.cz</span>
               </a>
             </div>
