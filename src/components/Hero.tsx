@@ -5,14 +5,26 @@ export function Hero() {
   return (
     <section className="relative bg-white py-20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Levá část s textem */}
-          <div>
+        {/* Na mobilu: obrázek první, text druhý. Od md výš: 2 sloupce vedle sebe */}
+        <div className="grid gap-12 items-center md:grid-cols-2">
+          {/* Obrázek – na mobilu první */}
+          <div className="order-1 md:order-2 relative w-full rounded-2xl overflow-hidden bg-white">
+            <div className="w-full aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
+              <img
+                src={heroImage}
+                alt="Senior Taxi"
+                className="w-full h-full object-contain object-right"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          {/* Text – na mobilu druhý */}
+          <div className="order-2 md:order-1">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               SENIOR TAXI SLEZSKO
             </h1>
 
-            {/* menší písmo + nezalamovat */}
             <p className="text-sm md:text-base text-gray-600 mb-8 whitespace-nowrap">
               Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český
               Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
@@ -25,18 +37,6 @@ export function Hero() {
               <Mail size={24} />
               info@seniortaxi.cz
             </a>
-          </div>
-
-          {/* Pravá část s obrázkem */}
-          <div className="relative w-full rounded-2xl overflow-hidden bg-white">
-            <div className="w-full aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
-              <img
-                src={heroImage}
-                alt="Senior Taxi"
-                className="w-full h-full object-contain object-right"
-                loading="eager"
-              />
-            </div>
           </div>
         </div>
       </div>
