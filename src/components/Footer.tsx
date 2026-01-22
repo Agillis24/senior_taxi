@@ -61,7 +61,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-gray-400">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>Hlavní 123, 160 00 Praha 6</span>
+                <span>Krůčkova 359/7, Svinov, 721 00 Ostrava</span>
               </li>
             </ul>
           </div>
