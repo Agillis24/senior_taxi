@@ -119,9 +119,9 @@ export function Header() {
               >
                 Kontakt
               </button>
-              <a href="tel:+420123456789" className="flex items-center gap-2 text-blue-600">
+              <a href="mailto:info@seniortaxi.cz" className="flex items-center gap-2 text-blue-600">
                 <Phone size={18} />
-                <span>+420 123 456 789</span>
+                <span>info@seniortaxi.cz</span>
               </a>
             </div>
           </nav>
