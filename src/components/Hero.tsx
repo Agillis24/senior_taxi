@@ -3,11 +3,11 @@ import heroImage from "../assets/hero.png";
 
 export function Hero() {
   return (
-    <section className="relative bg-white h-[calc(100svh-80px)]">
+    <section className="bg-white h-[calc(100svh-var(--header-h,0px))] overflow-hidden">
       <div className="container mx-auto px-4 h-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center h-full pt-10">
-          {/* Levá část s textem */}
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-center h-full">
+          {/* Levá část */}
+          <div className="self-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Profesionální doprava pro seniory
             </h1>
@@ -23,12 +23,12 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Pravá část s obrázkem */}
-          <div className="relative w-full rounded-2xl overflow-hidden bg-white">
+          {/* Pravá část */}
+          <div className="relative w-full rounded-2xl overflow-hidden bg-white self-center">
             <img
               src={heroImage}
               alt="Senior Taxi"
-              className="w-full h-[min(520px,60svh)] object-contain"
+              className="w-full h-[min(520px,60svh)] md:h-[min(560px,65svh)] object-contain"
               loading="eager"
             />
           </div>
