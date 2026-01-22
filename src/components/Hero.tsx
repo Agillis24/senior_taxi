@@ -9,10 +9,10 @@ export function Hero() {
           {/* Levá část s textem */}
           <div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Profesionální doprava pro seniory
+              SENIOR TAXI SLEZSKO
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              Bezpečná a pohodlná přeprava s osobním přístupem
+              Bezpečná a pohodlná přeprava seniorů s osobním přístupem
             </p>
             <a
               href="tel:+420123456789"
