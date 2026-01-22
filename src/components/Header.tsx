@@ -51,8 +51,8 @@ export function Header() {
               <span className="text-white text-xl font-bold">ST</span>
             </div>
             <div>
-              <h1 className="font-bold text-xl">Senior Taxi</h1>
-              <p className="text-xs text-gray-600">Doprava pro seniory</p>
+              <h1 className="font-bold text-xl">Senior Taxi Slezsko</h1>
+              <p className="text-xs text-gray-600">Pohodlnná přeprava seniorů</p>
             </div>
           </div>
 
