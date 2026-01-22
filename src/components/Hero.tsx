@@ -18,8 +18,8 @@ export function Hero() {
               href="tel:+420123456789"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-12 py-5 rounded-lg hover:bg-blue-700 transition gap-3 text-lg font-semibold shadow-lg"
             >
-              <Phone size={24} />
-              Zavolat +420 123 456 789
+              <Mail size={24} />
+              Napište nám: info@seniortaxi.cz
             </a>
           </div>
 
