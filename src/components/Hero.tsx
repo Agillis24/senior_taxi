@@ -11,9 +11,13 @@ export function Hero() {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               SENIOR TAXI SLEZSKO
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
+
+            {/* menší písmo + nezalamovat */}
+            <p className="text-sm md:text-base text-gray-600 mb-8 whitespace-nowrap">
+              Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český
+              Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
             </p>
+
             <a
               href="mailto:info@seniortaxi.cz"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-12 py-5 rounded-lg hover:bg-blue-700 transition gap-3 text-lg font-semibold shadow-lg"
