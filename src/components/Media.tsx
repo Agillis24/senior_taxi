@@ -64,7 +64,7 @@ export function Media() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kde o nás psali
+            Kde o nás psali?
           </h2>
         </div>
 
