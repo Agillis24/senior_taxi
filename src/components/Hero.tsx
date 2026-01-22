@@ -15,7 +15,7 @@ export function Hero() {
               Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
             </p>
             <a
-              href="tel:+420123456789"
+              href="mailto:info@seniortaxi.cz"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-12 py-5 rounded-lg hover:bg-blue-700 transition gap-3 text-lg font-semibold shadow-lg"
             >
               <Mail size={24} />
