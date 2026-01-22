@@ -24,7 +24,7 @@ export function Hero() {
           </div>
 
           {/* Pravá část s obrázkem */}
-          <div className="relative w-full rounded-2xl overflow-hidden bg-white aspect-[1080/608] md:aspect-auto md:min-h-[420px]">
+          <div className="relative w-full rounded-2xl overflow-hidden bg-white aspect-[1920/1080] md:aspect-auto md:min-h-[420px]">
             <img
               src={heroImage}
               alt="Senior Taxi"
