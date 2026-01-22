@@ -29,17 +29,34 @@ export function Footer() {
             <h4 className="font-bold mb-4">Rychlé odkazy</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#media" className="text-gray-400 hover:text-white transition">
+                <a
+                  href="#media"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Média
                 </a>
               </li>
               <li>
-                <a href="#sluzby" className="text-gray-400 hover:text-white transition">
+                <a
+                  href="#sluzby"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Služby
                 </a>
               </li>
               <li>
-                <a href="#kontakt" className="text-gray-400 hover:text-white transition">
+                <a
+                  href="#klienti"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Klienti
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#kontakt"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Kontakt
                 </a>
               </li>
@@ -52,7 +69,10 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
-                <a href="mailto:info@seniortaxiostrava.cz" className="hover:text-white transition">
+                <a
+                  href="mailto:info@seniortaxiostrava.cz"
+                  className="hover:text-white transition"
+                >
                   info@seniortaxiostrava.cz
                 </a>
               </li>
