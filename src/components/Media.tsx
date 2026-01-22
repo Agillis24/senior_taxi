@@ -6,6 +6,12 @@ export function Media() {
 
   const articles = [
     {
+      title: 'Senior taxi Valmez pokračuje, mění provoz i objednání služby',
+      publication: 'valasskezpravy.cz',
+      date: 'Prosinec 2025',
+      url: 'https://valasskezpravy.cz/aktuality/senior-taxi-valmez-pokracuje-meni-provoz-i-objednani-sluzby/',
+    },
+    {
       title: 'O senior taxi je v Porubě zájem mezi klienty i mezi řidiči',
       publication: 'MORAVSKOSLEZSKÝ deník.cz',
       date: 'Únor 2025',
