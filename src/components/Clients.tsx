@@ -33,11 +33,11 @@ export function Clients() {
               key={client.name}
               className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition"
             >
-              <div className="flex flex-col items-center justify-center h-32">
+              <div className="flex flex-col items-center justify-center h-44 md:h-48">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-14 md:h-16 w-auto object-contain mb-4"
+                  className="h-20 md:h-24 lg:h-28 w-auto object-contain mb-4"
                   loading="lazy"
                 />
                 <p className="text-sm text-gray-600 text-center font-medium">
