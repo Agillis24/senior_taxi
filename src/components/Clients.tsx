@@ -40,7 +40,7 @@ export function Clients() {
             Naši klienti
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Spolupracujeme s předními institucemi a organizacemi
+            Spolupracujeme s organizacemi, které kladou důraz na kvalitu péče, bezpečí a spolehlivost.
           </p>
         </div>
 
