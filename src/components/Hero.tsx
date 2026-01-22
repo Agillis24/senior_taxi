@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import heroImage from "../assets/hero.png";
 
 export function Hero() {
