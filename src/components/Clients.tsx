@@ -3,6 +3,7 @@ export function Clients() {
     {
       name: "Město Valašské Meziříčí",
       logo: new URL("../assets/valmez.png", import.meta.url).href,
+      phone: "+420 123 456 789",
     },
     {
       name: "Centrum sociálních služeb Jih",
@@ -11,6 +12,7 @@ export function Clients() {
     {
       name: "Městský obvod Ostrava - Poruba",
       logo: new URL("../assets/poruba.png", import.meta.url).href,
+      phone: "+420 123 456 789",
     },
   ];
 
@@ -40,9 +42,20 @@ export function Clients() {
                   className="h-20 md:h-24 lg:h-28 w-auto object-contain mb-4"
                   loading="lazy"
                 />
+
                 <p className="text-sm text-gray-600 text-center font-medium">
                   {client.name}
                 </p>
+
+                {/* malý banner jen pro vybrané klienty */}
+                {client.phone && (
+                  <a
+                    href={`tel:${client.phone.replace(/\s+/g, "")}`}
+                    className="mt-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition"
+                  >
+                    {client.phone}
+                  </a>
+                )}
               </div>
             </div>
           ))}
