@@ -80,7 +80,7 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+420123456789"
+              href="mailto:info@seniortaxi.cz"
               className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
             >
               <Mail size={18} />
