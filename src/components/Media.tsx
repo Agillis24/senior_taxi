@@ -6,16 +6,16 @@ export function Media() {
 
   const articles = [
     {
+      title: 'Senior taxi ve Valašském Meziříčí má v roce 2026 několik novinek',
+      publication: 'Televize TVS',
+      date: 'Leden 2026',
+      url: 'https://itvs24.cz/valasske-mezirici/senior-taxi-ve-valasskem-mezirici-ma-v-roce-2026-nekolik-novinek',
+    },
+    {
       title: 'Senior taxi Valmez pokračuje, mění provoz i objednání služby',
       publication: 'valasskezpravy.cz',
       date: 'Prosinec 2025',
       url: 'https://valasskezpravy.cz/aktuality/senior-taxi-valmez-pokracuje-meni-provoz-i-objednani-sluzby/',
-    },
-    {
-      title: 'O senior taxi je v Porubě zájem mezi klienty i mezi řidiči',
-      publication: 'MORAVSKOSLEZSKÝ deník.cz',
-      date: 'Únor 2025',
-      url: 'https://moravskoslezsky.denik.cz/zpravy_region/ostrava-poruba-senior-taxi-sluzba-klienti-ridici-doprava-20250226.html',
     },
     {
       title: 'Novinky v Senior taxi Valmez',
@@ -30,16 +30,16 @@ export function Media() {
       url: 'https://polar.cz/index.php/zpravy/ostrava/ostrava-poruba/11000047942/senior-expres-poruba-ma-za-sebou-rekordni-rok-taxiky-najezdily-pres-62-000-km?cmpscreen',
     },
     {
-      title: 'Senior taxi ve Valašském Meziříčí má v roce 2026 několik novinek',
-      publication: 'Televize TVS',
-      date: 'Leden 2026',
-      url: 'https://itvs24.cz/valasske-mezirici/senior-taxi-ve-valasskem-mezirici-ma-v-roce-2026-nekolik-novinek',
-    },
-    {
       title: 'Senior Expres Poruba má za sebou rekordní rok. Taxíky najezdily přes 62 000 km',
       publication: 'Polar TV',
       date: 'Březen 2025',
       url: 'https://polar.cz/zpravy/ostrava/ostrava-mesto/11000047901/senior-expres-poruba-ma-za-sebou-rekordni-rok-taxiky-najezdily-pres-62-000-km?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu',
+    },
+    {
+      title: 'O senior taxi je v Porubě zájem mezi klienty i mezi řidiči',
+      publication: 'MORAVSKOSLEZSKÝ deník.cz',
+      date: 'Únor 2025',
+      url: 'https://moravskoslezsky.denik.cz/zpravy_region/ostrava-poruba-senior-taxi-sluzba-klienti-ridici-doprava-20250226.html',
     },
   ];
 
