@@ -5,11 +5,9 @@ export function Hero() {
   return (
     <section className="relative bg-white py-20">
       <div className="container mx-auto px-4">
-        {/* Na mobilu: obrázek první, text druhý. Od md výš: 2 sloupce vedle sebe */}
         <div className="grid gap-12 items-center md:grid-cols-2">
           {/* Obrázek – na mobilu první */}
           <div className="order-1 md:order-2 relative w-full rounded-2xl overflow-hidden bg-white">
-            {/* jemný "glow" overlay (volitelné, vypadá dobře na úvodních fotkách) */}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-blue-50 via-transparent to-blue-100 opacity-60" />
 
             <div className="w-full aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
@@ -17,11 +15,8 @@ export function Hero() {
                 src={heroImage}
                 alt="Senior Taxi"
                 loading="eager"
-                className="
-                  w-full h-full object-contain object-right
-                  will-change-transform
-                  animate-[heroIntro_900ms_ease-out_both]
-                "
+                className="w-full h-full object-contain object-right will-change-transform"
+                style={{ animation: "heroIntro 900ms ease-out both" }}
               />
             </div>
           </div>
@@ -33,8 +28,8 @@ export function Hero() {
             </h1>
 
             <p className="text-sm md:text-base text-gray-600 mb-8 whitespace-nowrap">
-              Budujeme spolehlivou dopravu pro seniory s důrazem na bezpečí a
-              lidský přístup.
+              Budujeme spolehlivou dopravu pro seniory s důrazem na bezpečí a lidský
+              přístup.
             </p>
 
             <a
@@ -48,11 +43,10 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Keyframes jen pro Hero (bez zásahu do globálního CSS) */}
       <style>
         {`
           @keyframes heroIntro {
-            0% { opacity: 0; transform: translateY(10px) scale(0.98); filter: blur(6px); }
+            0% { opacity: 0; transform: translateY(12px) scale(0.985); filter: blur(6px); }
             100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
           }
         `}
