@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Phone } from "lucide-react";
 import heroImage from "../assets/hero.png";
 
 export function Hero() {
@@ -30,11 +30,11 @@ export function Hero() {
             </p>
 
             <a
-              href="mailto:info@seniortaxiostrava.cz"
+              href="tel:+420123456789"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-12 py-5 rounded-lg hover:bg-blue-700 transition gap-3 text-lg font-semibold shadow-lg"
             >
-              <Mail size={24} />
-              info@seniortaxiostrava.cz
+              <Phone size={24} />
+              +420 608 771 144
             </a>
           </div>
         </div>
