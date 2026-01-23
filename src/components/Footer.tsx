@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -67,6 +67,17 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Kontakt</h4>
             <ul className="space-y-3">
+              {/* Telefon – nad e-mailem */}
+              <li className="flex items-center gap-2 text-gray-400">
+                <Phone size={16} />
+                <a
+                  href="tel:+420608771144"
+                  className="hover:text-white transition"
+                >
+                  +420 608 771 144
+                </a>
+              </li>
+
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
                 <a
@@ -76,6 +87,7 @@ export function Footer() {
                   info@seniortaxiostrava.cz
                 </a>
               </li>
+
               <li className="flex items-start gap-2 text-gray-400">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <span>Krůčkova 359/7, Svinov, 721 00 Ostrava</span>
