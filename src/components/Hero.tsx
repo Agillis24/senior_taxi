@@ -22,7 +22,7 @@ export function Hero() {
           {/* Text – na mobilu druhý */}
           <div className="order-2 md:order-1">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              SENIOR TAXI SLEZSKO
+              SENIOR TAXI OSTRAVA
             </h1>
 
             <p className="text-sm md:text-base text-gray-600 mb-8 whitespace-nowrap">
