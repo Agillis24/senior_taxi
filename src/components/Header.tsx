@@ -14,6 +14,11 @@ export function Header() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     const el = headerRef.current;
     if (!el) return;
@@ -46,7 +51,13 @@ export function Header() {
     <header ref={headerRef} className="sticky top-0 bg-white shadow-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          <div className="flex items-center gap-3">
+          {/* Kliknutelné logo + text (scroll na začátek) */}
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="flex items-center gap-3 text-left"
+            aria-label="Přejít na začátek stránky"
+          >
             <img
               src={logo}
               alt="Logo Senior Taxi"
@@ -56,7 +67,7 @@ export function Header() {
               <h1 className="font-bold text-xl">Senior Taxi Ostrava</h1>
               <p className="text-xs text-gray-600">Pohodlná přeprava seniorů</p>
             </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
@@ -102,49 +113,4 @@ export function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t">
-            <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("media")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-              >
-                Média
-              </button>
-              <button
-                onClick={() => scrollToSection("sluzby")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-              >
-                Služby
-              </button>
-              <button
-                onClick={() => scrollToSection("klienti")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-              >
-                Klienti
-              </button>
-              <button
-                onClick={() => scrollToSection("kontakt")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-              >
-                Kontakt
-              </button>
-              <a
-                href="mailto:info@seniortaxiostrava.cz"
-                className="flex items-center gap-2 text-blue-600"
-              >
-                <Mail size={18} />
-                <span>info@seniortaxiostrava.cz</span>
-              </a>
-            </div>
-          </nav>
-        )}
-      </div>
-    </header>
-  );
-}
+            {mobileMenuOpen ? <X size={24} />
