@@ -1,26 +1,29 @@
-import { Stethoscope, Building2, ShoppingCart, Users } from 'lucide-react';
+import { Stethoscope, Building2, ShoppingCart, Users } from "lucide-react";
 
 export function Services() {
   const services = [
     {
       icon: Stethoscope,
-      title: 'Zdravotní péče',
-      description: 'K lékaři, do nemocnice, na vyšetření i rehabilitaci – s ohledem na potřeby seniora.',
+      title: "Zdravotní péče",
+      description:
+        "K lékaři, do nemocnice, na vyšetření i rehabilitaci – s ohledem na potřeby seniora.",
     },
     {
       icon: Building2,
-      title: 'Úřady a instituce',
-      description: 'Na úřady, do banky, k notáři nebo na poštu – bez stresu a ve vašem tempu.',
+      title: "Úřady a instituce",
+      description:
+        "Na úřady, do banky, k notáři nebo na poštu – bez stresu a ve vašem tempu.",
     },
     {
       icon: ShoppingCart,
-      title: 'Každodenní potřeby',
-      description: 'Na nákupy včetně pomoci s odnosem zavazadel.',
+      title: "Každodenní potřeby",
+      description: "Na nákupy včetně pomoci s odnosem zavazadel.",
     },
     {
       icon: Users,
-      title: 'Sociální aktivity',
-      description: 'Do centra sociálních služeb, na setkání, případně i na hřbitov – důstojně a spolehlivě.',
+      title: "Sociální aktivity",
+      description:
+        "Do centra sociálních služeb, na setkání, případně i na hřbitov – důstojně a spolehlivě.",
     },
   ];
 
@@ -40,7 +43,10 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition">
+              <div
+                key={index}
+                className="bg-blue-50 p-6 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition"
+              >
                 <div className="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Icon className="text-white" size={28} />
                 </div>
