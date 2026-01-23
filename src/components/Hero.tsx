@@ -26,8 +26,7 @@ export function Hero() {
             </h1>
 
             <p className="text-sm md:text-base text-gray-600 mb-8 whitespace-nowrap">
-              Opava - Ostrava - Karviná - Havířov - Frýdek-Místek - Krnov - Český
-              Těšín - Hlučín - Jeseník - Bohumín - Jablunkov
+              Budujeme spolehlivou dopravu pro seniory s důrazem na bezpečí a lidský přístup.
             </p>
 
             <a
