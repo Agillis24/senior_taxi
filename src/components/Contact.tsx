@@ -8,22 +8,37 @@ export function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Chtěli byste senior taxi i u Vás?
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">Kontaktujte nás.</p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Kontaktujte nás.
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {/* Velký modrý box – email info */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-10 rounded-2xl text-center text-white shadow-xl">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 sm:p-10 rounded-2xl text-center text-white shadow-xl">
             <h3 className="text-2xl font-bold mb-4">Napište nám</h3>
             <p className="text-blue-100 mb-6 text-lg">Odpovíme do 24 hodin</p>
 
-            <a
-              href="mailto:info@seniortaxiostrava.cz"
-              className="inline-flex items-center justify-center bg-white text-blue-600 px-10 py-4 rounded-lg hover:bg-gray-100 transition gap-3 font-bold text-lg shadow-lg"
-            >
-              <Mail size={24} />
-              info@seniortaxiostrava.cz
-            </a>
+            {/* wrapper: vždy vycentruje */}
+            <div className="flex justify-center">
+              <a
+                href="mailto:info@seniortaxiostrava.cz"
+                className="
+                  w-full max-w-md
+                  flex items-center justify-center gap-3
+                  bg-white text-blue-600
+                  px-6 sm:px-10 py-4
+                  rounded-lg
+                  hover:bg-gray-100 transition
+                  font-bold text-base sm:text-lg
+                  shadow-lg
+                  mx-auto
+                "
+              >
+                <Mail size={22} className="shrink-0" />
+                <span className="truncate">info@seniortaxiostrava.cz</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
