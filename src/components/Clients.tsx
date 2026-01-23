@@ -4,6 +4,7 @@ export function Clients() {
       name: "Město Valašské Meziříčí",
       logo: new URL("../assets/valmez.png", import.meta.url).href,
       phone: "+420 775 896 947",
+      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680", // uprav na přesný odkaz, pokud chceš jiný
     },
     {
       name: "Centrum sociálních služeb Jih",
@@ -13,6 +14,7 @@ export function Clients() {
       name: "Městský obvod Ostrava - Poruba",
       logo: new URL("../assets/poruba.png", import.meta.url).href,
       phone: "+420 602 872 003",
+      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba", // uprav na přesný odkaz, pokud chceš jiný
     },
   ];
 
@@ -30,11 +32,8 @@ export function Clients() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {clients.map((client) => (
-            <div
-              key={client.name}
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition"
-            >
+          {clients.map((client) => {
+            const CardInner = (
               <div className="flex flex-col items-center justify-center h-44 md:h-48">
                 <img
                   src={client.logo}
@@ -51,13 +50,33 @@ export function Clients() {
                   <a
                     href={`tel:${client.phone.replace(/\s+/g, "")}`}
                     className="mt-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     {client.phone}
                   </a>
                 )}
               </div>
-            </div>
-          ))}
+            );
+
+            return client.url ? (
+              <a
+                key={client.name}
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
+              >
+                {CardInner}
+              </a>
+            ) : (
+              <div
+                key={client.name}
+                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
+              >
+                {CardInner}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
