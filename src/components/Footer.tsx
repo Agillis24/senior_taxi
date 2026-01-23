@@ -29,34 +29,22 @@ export function Footer() {
             <h4 className="font-bold mb-4">Rychlé odkazy</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#media"
-                  className="text-gray-400 hover:text-white transition"
-                >
+                <a href="#media" className="text-gray-400 hover:text-white transition">
                   Média
                 </a>
               </li>
               <li>
-                <a
-                  href="#sluzby"
-                  className="text-gray-400 hover:text-white transition"
-                >
+                <a href="#sluzby" className="text-gray-400 hover:text-white transition">
                   Služby
                 </a>
               </li>
               <li>
-                <a
-                  href="#klienti"
-                  className="text-gray-400 hover:text-white transition"
-                >
+                <a href="#klienti" className="text-gray-400 hover:text-white transition">
                   Klienti
                 </a>
               </li>
               <li>
-                <a
-                  href="#kontakt"
-                  className="text-gray-400 hover:text-white transition"
-                >
+                <a href="#kontakt" className="text-gray-400 hover:text-white transition">
                   Kontakt
                 </a>
               </li>
@@ -67,23 +55,16 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Kontakt</h4>
             <ul className="space-y-3">
-              {/* Telefon – nad e-mailem */}
               <li className="flex items-center gap-2 text-gray-400">
                 <Phone size={16} />
-                <a
-                  href="tel:+420608771144"
-                  className="hover:text-white transition"
-                >
+                <a href="tel:+420608771144" className="hover:text-white transition">
                   +420 608 771 144
                 </a>
               </li>
 
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
-                <a
-                  href="mailto:info@seniortaxiostrava.cz"
-                  className="hover:text-white transition"
-                >
+                <a href="mailto:info@seniortaxiostrava.cz" className="hover:text-white transition">
                   info@seniortaxiostrava.cz
                 </a>
               </li>
@@ -101,6 +82,15 @@ export function Footer() {
             <p className="text-gray-400 text-sm">
               © {currentYear} Autodoprava Luzar s.r.o. Všechna práva vyhrazena.
             </p>
+
+            {/* PDF odkaz vpravo dole */}
+            <a
+              href="/Zasady_senior_taxi.pdf"
+              download="Zasady_senior_taxi.pdf"
+              className="text-gray-400 hover:text-white transition text-sm underline underline-offset-4"
+            >
+              Zásady a kodex služby Senior taxi
+            </a>
           </div>
         </div>
       </div>
