@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- GH Pages SPA: vrácení původní cesty po redirectu z 404.html -->
+    <script>
+      (function () {
+        const redirect = sessionStorage.redirect;
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          history.replaceState(null, "", redirect);
+        }
+      })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO (výchozí; pro /klienti, /sluzby… se přepíše přes Helmet) -->
+    <title>Senior Taxi Slezsko | Pohodlná přeprava seniorů</title>
+    <meta
+      name="description"
+      content="Senior Taxi Slezsko – pohodlná a bezpečná přeprava seniorů v regionu. Kontakt: info@seniortaxiostrava.cz."
+    />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph (výchozí; URL/canonical se řeší přes Helmet) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:title" content="Senior Taxi Slezsko" />
+    <meta
+      property="og:description"
+      content="Pohodlná a bezpečná přeprava seniorů v regionu Slezsko. Kontakt: info@seniortaxiostrava.cz."
+    />
+    <meta property="og:url" content="https://seniortaxiostrava.cz/" />
+    <meta property="og:site_name" content="Senior Taxi Slezsko" />
+    <!-- vytvoř soubor /public/og.jpg (1200x630) -->
+    <meta property="og:image" content="https://seniortaxiostrava.cz/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Senior Taxi Slezsko" />
+    <meta
+      name="twitter:description"
+      content="Pohodlná a bezpečná přeprava seniorů v regionu Slezsko. Kontakt: info@seniortaxiostrava.cz."
+    />
+    <meta name="twitter:image" content="https://seniortaxiostrava.cz/og.jpg" />
+
+    <!-- Favicon (volitelné) -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Structured data (doporučené) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Senior Taxi Slezsko",
+        "url": "https://seniortaxiostrava.cz/",
+        "email": "info@seniortaxiostrava.cz",
+        "areaServed": "Moravskoslezský kraj",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CZ"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-3RO2WhFT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CAdwhLbT.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
