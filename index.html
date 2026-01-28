@@ -2,18 +2,29 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- GH Pages SPA: vrácení původní cesty po redirectu z 404.html -->
+    <script>
+      (function () {
+        const redirect = sessionStorage.redirect;
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          history.replaceState(null, "", redirect);
+        }
+      })();
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
+    <!-- Primary SEO (výchozí; pro /klienti, /sluzby… se přepíše přes Helmet) -->
     <title>Senior Taxi Slezsko | Pohodlná přeprava seniorů</title>
     <meta
       name="description"
       content="Senior Taxi Slezsko – pohodlná a bezpečná přeprava seniorů v regionu. Kontakt: info@seniortaxiostrava.cz."
     />
-    <link rel="canonical" href="https://seniortaxiostrava.cz/" />
     <meta name="robots" content="index,follow" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (výchozí; URL/canonical se řeší přes Helmet) -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="cs_CZ" />
     <meta property="og:title" content="Senior Taxi Slezsko" />
@@ -38,7 +49,6 @@
     <meta name="twitter:image" content="https://seniortaxiostrava.cz/og.jpg" />
 
     <!-- Favicon (volitelné) -->
-    <!-- dej do /public/favicon.svg nebo favicon.ico -->
     <link rel="icon" href="/favicon.ico" />
 
     <!-- Structured data (doporučené) -->

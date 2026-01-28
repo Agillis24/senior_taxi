@@ -1,25 +1,16 @@
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Media } from './components/Media';
-import { HowItWorks } from './components/HowItWorks';
-import { Services } from './components/Services';
-import { Clients } from './components/Clients';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { Toaster } from './components/ui/sonner';
+import { Routes, Route } from "react-router-dom";
+import { OnePage } from "./components/OnePage";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <Media />
-      <HowItWorks />
-      <Services />
-      <Clients />
-      <Contact />
-      <Footer />
-      <Toaster />
-    </div>
+    <Routes>
+      <Route path="/" element={<OnePage sectionId={null} />} />
+      <Route path="/klienti" element={<OnePage sectionId="klienti" />} />
+      <Route path="/sluzby" element={<OnePage sectionId="sluzby" />} />
+      <Route path="/media" element={<OnePage sectionId="media" />} />
+      <Route path="/jak-to-funguje" element={<OnePage sectionId="jak-to-funguje" />} />
+      <Route path="/kontakt" element={<OnePage sectionId="kontakt" />} />
+      <Route path="*" element={<OnePage sectionId={null} />} />
+    </Routes>
   );
 }

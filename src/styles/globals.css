@@ -183,3 +183,7 @@
 html {
   font-size: var(--font-size);
 }
+/* Offset scrollu pro sticky header (one-page routy) */
+section[id] {
+  scroll-margin-top: var(--header-h, 80px);
+}

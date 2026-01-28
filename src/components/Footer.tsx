@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,24 +30,44 @@ export function Footer() {
             <h4 className="font-bold mb-4">Rychlé odkazy</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#media" className="text-gray-400 hover:text-white transition">
+                <Link
+                  to="/media"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Média
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#sluzby" className="text-gray-400 hover:text-white transition">
+                <Link
+                  to="/jak-to-funguje"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Jak to funguje
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/sluzby"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Služby
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#klienti" className="text-gray-400 hover:text-white transition">
+                <Link
+                  to="/klienti"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Klienti
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#kontakt" className="text-gray-400 hover:text-white transition">
+                <Link
+                  to="/kontakt"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Kontakt
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,14 +78,20 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-400">
                 <Phone size={16} />
-                <a href="tel:+420608771144" className="hover:text-white transition">
+                <a
+                  href="tel:+420608771144"
+                  className="hover:text-white transition"
+                >
                   +420 608 771 144
                 </a>
               </li>
 
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
-                <a href="mailto:info@seniortaxiostrava.cz" className="hover:text-white transition">
+                <a
+                  href="mailto:info@seniortaxiostrava.cz"
+                  className="hover:text-white transition"
+                >
                   info@seniortaxiostrava.cz
                 </a>
               </li>
@@ -83,7 +110,7 @@ export function Footer() {
               © {currentYear} Autodoprava Luzar s.r.o. Všechna práva vyhrazena.
             </p>
 
-            {/* PDF odkaz vpravo dole */}
+            {/* PDF odkaz */}
             <a
               href="/Zasady_senior_taxi.pdf"
               download="Zasady_senior_taxi.pdf"

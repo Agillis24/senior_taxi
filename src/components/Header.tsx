@@ -1,18 +1,17 @@
 import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const location = useLocation();
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false);
-    }
-  };
+  // zavři mobilní menu po změně URL (klik v menu)
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const el = headerRef.current;
@@ -42,16 +41,17 @@ export function Header() {
     document.documentElement.style.setProperty("--header-h", `${h}px`);
   }, [mobileMenuOpen]);
 
+  const NavLinkClasses = "text-gray-700 hover:text-blue-600 transition";
+
   return (
     <header ref={headerRef} className="sticky top-0 bg-white shadow-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Kliknutelné logo + text (reload stránky) */}
-          <a
-            href="https://seniortaxiostrava.cz/"
+          {/* Logo (bez reloadu stránky) */}
+          <Link
+            to="/"
             className="flex items-center gap-3 text-left"
             aria-label="Přejít na úvodní stránku"
-            onClick={() => setMobileMenuOpen(false)}
           >
             <img
               src={logo}
@@ -62,34 +62,22 @@ export function Header() {
               <h1 className="font-bold text-xl">Senior Taxi Ostrava</h1>
               <p className="text-xs text-gray-600">Pohodlná přeprava seniorů</p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <button
-              onClick={() => scrollToSection("media")}
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
+            <Link to="/media" className={NavLinkClasses}>
               Média
-            </button>
-            <button
-              onClick={() => scrollToSection("sluzby")}
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
+            </Link>
+            <Link to="/sluzby" className={NavLinkClasses}>
               Služby
-            </button>
-            <button
-              onClick={() => scrollToSection("klienti")}
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
+            </Link>
+            <Link to="/klienti" className={NavLinkClasses}>
               Klienti
-            </button>
-            <button
-              onClick={() => scrollToSection("kontakt")}
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
+            </Link>
+            <Link to="/kontakt" className={NavLinkClasses}>
               Kontakt
-            </button>
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -117,34 +105,19 @@ export function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden py-4 border-t">
             <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("media")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-                type="button"
-              >
+              <Link to="/media" className={`${NavLinkClasses} text-left`}>
                 Média
-              </button>
-              <button
-                onClick={() => scrollToSection("sluzby")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-                type="button"
-              >
+              </Link>
+              <Link to="/sluzby" className={`${NavLinkClasses} text-left`}>
                 Služby
-              </button>
-              <button
-                onClick={() => scrollToSection("klienti")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-                type="button"
-              >
+              </Link>
+              <Link to="/klienti" className={`${NavLinkClasses} text-left`}>
                 Klienti
-              </button>
-              <button
-                onClick={() => scrollToSection("kontakt")}
-                className="text-gray-700 hover:text-blue-600 transition text-left"
-                type="button"
-              >
+              </Link>
+              <Link to="/kontakt" className={`${NavLinkClasses} text-left`}>
                 Kontakt
-              </button>
+              </Link>
+
               <a
                 href="mailto:info@seniortaxiostrava.cz"
                 className="flex items-center gap-2 text-blue-600"
