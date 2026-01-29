@@ -8,11 +8,12 @@ export function Header() {
   const headerRef = useRef<HTMLElement | null>(null);
   const location = useLocation();
 
-  // zavři mobilní menu po změně URL (klik v menu)
+  // Zavři mobilní menu po změně URL
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
+  // Výpočet výšky headeru pro scroll offset
   useEffect(() => {
     const el = headerRef.current;
     if (!el) return;
@@ -47,9 +48,9 @@ export function Header() {
     <header ref={headerRef} className="sticky top-0 bg-white shadow-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo (bez reloadu stránky) */}
-          <Link
-            to="/"
+          {/* LOGO – vždy hard reload */}
+          <a
+            href="/"
             className="flex items-center gap-3 text-left"
             aria-label="Přejít na úvodní stránku"
           >
@@ -60,11 +61,13 @@ export function Header() {
             />
             <div>
               <h1 className="font-bold text-xl">Senior Taxi Ostrava</h1>
-              <p className="text-xs text-gray-600">Pohodlná přeprava seniorů</p>
+              <p className="text-xs text-gray-600">
+                Pohodlná přeprava seniorů
+              </p>
             </div>
-          </Link>
+          </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop menu */}
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/media" className={NavLinkClasses}>
               Média
@@ -80,6 +83,7 @@ export function Header() {
             </Link>
           </nav>
 
+          {/* Kontakt vpravo */}
           <div className="hidden md:flex items-center gap-4">
             <a
               href="mailto:info@seniortaxiostrava.cz"
@@ -90,7 +94,7 @@ export function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             className="md:hidden text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -101,7 +105,7 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile menu */}
         {mobileMenuOpen && (
           <nav className="md:hidden py-4 border-t">
             <div className="flex flex-col gap-4">
