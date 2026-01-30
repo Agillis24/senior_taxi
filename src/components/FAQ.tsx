@@ -6,7 +6,7 @@ type FaqItem = {
   a: string;
 };
 
-export default function Faq() {
+export function FAQ() {
   const baseId = useId();
 
   const items: FaqItem[] = useMemo(
