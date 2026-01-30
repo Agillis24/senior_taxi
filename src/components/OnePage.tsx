@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 import { Header } from "./Header";
 import { Hero } from "./Hero";
@@ -17,10 +18,7 @@ type Props = {
 
 const DOMAIN = "https://seniortaxiostrava.cz";
 
-const SEO: Record<
-  string,
-  { title: string; description: string; canonical: string }
-> = {
+const SEO: Record<string, { title: string; description: string; canonical: string }> = {
   "/": {
     title: "Senior Taxi Ostrava | Bezpečná přeprava seniorů",
     description:
@@ -59,9 +57,17 @@ const SEO: Record<
   },
 };
 
+function normalizePath(pathname: string) {
+  // sjednotíme /klienti/ -> /klienti (Google nemá rád duplicity)
+  if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
+  return pathname;
+}
+
 export function OnePage({ sectionId }: Props) {
-  // SEO podle skutečné URL (robustní, neplete se s sectionId)
-  const path = window.location.pathname;
+  const location = useLocation();
+  const path = normalizePath(location.pathname);
+
+  // fallback na homepage
   const meta = SEO[path] ?? SEO["/"];
 
   useEffect(() => {
@@ -70,9 +76,11 @@ export function OnePage({ sectionId }: Props) {
     const el = document.getElementById(sectionId);
     if (!el) return;
 
-    setTimeout(() => {
+    const t = setTimeout(() => {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 80);
+
+    return () => clearTimeout(t);
   }, [sectionId]);
 
   return (
@@ -80,9 +88,11 @@ export function OnePage({ sectionId }: Props) {
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+
+        {/* canonical sjednocený */}
         <link rel="canonical" href={meta.canonical} />
 
-        {/* volitelně: OG/Twitter pro sdílení (zůstane stejné pro všechny, nebo si je můžeš rozlišit stejně jako title) */}
+        {/* OG/Twitter */}
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:url" content={meta.canonical} />
