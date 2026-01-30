@@ -40,7 +40,7 @@ export function FAQ() {
     []
   );
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (i: number) => {
     setOpenIndex((prev) => (prev === i ? null : i));
@@ -59,25 +59,30 @@ export function FAQ() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
+          <div className="rounded-2xl bg-white shadow-sm border border-gray-100 overflow-hidden">
             {items.map((item, i) => {
               const isOpen = openIndex === i;
 
               return (
-                <div key={i} className="border-t first:border-t-0 border-gray-100">
+                <div
+                  key={i}
+                  className="border-t first:border-t-0 border-gray-100"
+                >
                   <button
                     type="button"
                     onClick={() => toggle(i)}
                     className="
-                      w-full flex items-center justify-between gap-4
-                      px-6 py-5 text-left
+                      w-full flex items-center justify-between gap-6
+                      px-6 md:px-8 py-6
+                      text-left
                       transition
                       hover:bg-gray-50
                       group
+                      focus:outline-none
                     "
                     aria-expanded={isOpen}
                   >
-                    <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition">
+                    <span className="font-semibold text-base md:text-lg text-gray-900 group-hover:text-blue-600 transition">
                       {item.q}
                     </span>
 
@@ -89,14 +94,19 @@ export function FAQ() {
                     />
                   </button>
 
+                  {/* Plynulé rozbalování přes grid-rows (vypadá líp než max-height) */}
                   <div
-                    className={`px-6 overflow-hidden transition-all ${
-                      isOpen ? "max-h-40 pb-5" : "max-h-0"
+                    className={`grid transition-all duration-300 ease-out ${
+                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                     }`}
                   >
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {item.a}
-                    </p>
+                    <div className="overflow-hidden">
+                      <div className="px-6 md:px-8 pb-6">
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                          {item.a}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );
