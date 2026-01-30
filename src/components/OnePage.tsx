@@ -8,6 +8,7 @@ import { Media } from "./Media";
 import { HowItWorks } from "./HowItWorks";
 import { Services } from "./Services";
 import { Clients } from "./Clients";
+import { FAQ } from "./FAQ";
 import { Contact } from "./Contact";
 import { Footer } from "./Footer";
 import { Toaster } from "./ui/sonner";
@@ -47,6 +48,12 @@ const SEO: Record<string, { title: string; description: string; canonical: strin
     title: "Jak to funguje | Senior Taxi Ostrava",
     description:
       "Jak senior taxi funguje: objednání, vyzvednutí, GPS evidence jízd a měsíční fakturace pro instituce.",
+    canonical: `${DOMAIN}/jak-to-funguje`,
+  },
+  "/faw": {
+    title: "Nejčastější otázky a odpovědi | Senior Taxi Ostrava",
+    description:
+      "Zajímají Vás odpovědi na nejčastější otázky? Máme je pro Vás.",
     canonical: `${DOMAIN}/jak-to-funguje`,
   },
   "/kontakt": {
@@ -106,6 +113,7 @@ export function OnePage({ sectionId }: Props) {
       <HowItWorks />
       <Services />
       <Clients />
+      <FAQ />
       <Contact />
       <Footer />
       <Toaster />
