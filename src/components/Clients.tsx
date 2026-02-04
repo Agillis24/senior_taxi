@@ -25,90 +25,95 @@ export function Clients() {
   ];
 
   return (
-    <section id="klienti" className="py-20 bg-gray-50">
+    <section id="klienti" className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          {isClientsRoute && (
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Naši klienti a spolupracující města
-            </h1>
-          )}
-
-          {!isClientsRoute && (
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Kdo jsou naši klienti?
-            </h2>
-          )}
-
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Spolupracujeme s městy, městskými obvody a organizacemi, které kladou
-            důraz na kvalitu péče, bezpečí a spolehlivost přepravy seniorů.
-          </p>
-
-          {isClientsRoute && (
-            <div className="mt-6 max-w-3xl mx-auto text-left text-gray-700 leading-relaxed space-y-3">
-              <p>
-                Naši partneři využívají Senior Taxi jako praktickou službu pro
-                občany – zejména pro cesty k lékaři, na úřady, na nákupy nebo na
-                společenské aktivity. Spolupráce je vhodná pro samosprávy i
-                sociální organizace, které chtějí mít dopravu seniorů pod
-                kontrolou a zároveň zachovat lidský přístup.
-              </p>
-              <p>
-                Důležitý je pro nás jednoduchý proces objednání, spolehlivost a
-                transparentní evidence jízd. Pokud chcete Senior Taxi zavést i u
-                vás, ozvěte se nám – rádi vysvětlíme možnosti nastavení služby.
-              </p>
-            </div>
-          )}
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {clients.map((client) => {
-            const CardInner = (
-              <div className="flex flex-col items-center justify-center h-44 md:h-48">
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-20 md:h-24 lg:h-28 w-auto object-contain mb-4"
-                  loading="lazy"
-                />
-
-                <p className="text-sm text-gray-600 text-center font-medium">
-                  {client.name}
-                </p>
-
-                {client.phone && (
-                  <a
-                    href={`tel:${client.phone.replace(/\s+/g, "")}`}
-                    className="mt-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {client.phone}
-                  </a>
-                )}
-              </div>
-            );
-
-            return client.url ? (
-              <a
-                key={client.name}
-                href={client.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
-              >
-                {CardInner}
-              </a>
+        <div className="grid gap-10 lg:grid-cols-12 items-start">
+          {/* Left: heading + copy */}
+          <div className="lg:col-span-5">
+            {isClientsRoute ? (
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Naši klienti a spolupracující města
+              </h1>
             ) : (
-              <div
-                key={client.name}
-                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
-              >
-                {CardInner}
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Kdo jsou naši klienti?
+              </h2>
+            )}
+
+            <p className="mt-4 text-lg text-gray-600">
+              Spolupracujeme s městy, městskými obvody a organizacemi, které kladou
+              důraz na kvalitu péče, bezpečí a spolehlivost přepravy seniorů.
+            </p>
+
+            {isClientsRoute && (
+              <div className="mt-6 text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  Naši partneři využívají Senior Taxi jako praktickou službu pro občany –
+                  zejména pro cesty k lékaři, na úřady, na nákupy nebo na společenské aktivity.
+                </p>
+                <p>
+                  Důležitý je pro nás jednoduchý proces objednání, spolehlivost a transparentní
+                  evidence jízd. Pokud chcete Senior Taxi zavést i u vás, ozvěte se nám – rádi
+                  vysvětlíme možnosti nastavení služby.
+                </p>
               </div>
-            );
-          })}
+            )}
+
+            {/* Optional small note */}
+            <p className="mt-6 text-sm text-gray-500">
+              Kliknutím na kartu se u vybraných klientů otevře článek / informace o službě.
+            </p>
+          </div>
+
+          {/* Right: cards */}
+          <div className="lg:col-span-7">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {clients.map((client) => {
+                const Card = (
+                  <div className="h-full rounded-2xl bg-white border border-gray-100 p-6 shadow-sm hover:shadow-md transition">
+                    <div className="flex items-center justify-center rounded-xl bg-gray-50 border border-gray-100 h-24">
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        className="h-14 w-auto object-contain px-6"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="mt-4 text-center">
+                      <p className="text-sm font-semibold text-gray-900">
+                        {client.name}
+                      </p>
+
+                      {client.phone && (
+                        <a
+                          href={`tel:${client.phone.replace(/\s+/g, "")}`}
+                          className="mt-2 inline-flex items-center justify-center text-sm font-medium text-blue-700 hover:underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {client.phone}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                );
+
+                return client.url ? (
+                  <a
+                    key={client.name}
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block focus:outline-none focus:ring-2 focus:ring-blue-200 rounded-2xl"
+                  >
+                    {Card}
+                  </a>
+                ) : (
+                  <div key={client.name}>{Card}</div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
