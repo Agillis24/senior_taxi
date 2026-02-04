@@ -49,3 +49,42 @@ export function Clients() {
                 />
 
                 <p className="text-sm text-gray-600 text-center font-medium">
+                  {client.name}
+                </p>
+
+                {client.phone && (
+                  <a
+                    href={`tel:${client.phone.replace(/\s+/g, "")}`}
+                    className="mt-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {client.phone}
+                  </a>
+                )}
+              </div>
+            );
+
+            return client.url ? (
+              <a
+                key={client.name}
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
+              >
+                {CardInner}
+              </a>
+            ) : (
+              <div
+                key={client.name}
+                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
+              >
+                {CardInner}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
