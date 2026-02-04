@@ -23,12 +23,24 @@ export function Clients() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kdo jsou naši klienti?
+            Partneři služby Senior Taxi
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Spolupracujeme s organizacemi, které kladou důraz na kvalitu péče,
-            bezpečí a spolehlivost.
-          </p>
+
+          <div className="max-w-3xl mx-auto text-gray-600">
+            <p className="text-lg leading-relaxed">
+              Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
+              dopravu pro seniory.
+            </p>
+
+            <p className="text-lg leading-relaxed mt-3 md:mt-4">
+              Spolupráce je nastavitelná podle potřeb obce – s důrazem na
+              transparentní evidenci a spolehlivý provoz.
+            </p>
+
+            <p className="text-sm text-gray-500 mt-4 md:mt-5">
+              Zajímá vás spolupráce? Ozvěte se nám přes stránku Kontakt.
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
