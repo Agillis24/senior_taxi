@@ -1,4 +1,9 @@
-import { Newspaper, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Newspaper,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { useState } from "react";
 
 export function Media() {
@@ -6,20 +11,22 @@ export function Media() {
 
   const articles = [
     {
-      title: "Senior taxi ve Valašském Meziříčí má v roce 2026 několik novinek",
+      title:
+        "Senior taxi ve Valašském Meziříčí má v roce 2026 několik novinek",
       publication: "Televize TVS",
       date: "Leden 2026",
       url: "https://itvs24.cz/valasske-mezirici/senior-taxi-ve-valasskem-mezirici-ma-v-roce-2026-nekolik-novinek",
     },
     {
-      title: "Senior taxi Valmez pokračuje, mění provoz i objednání služby",
+      title:
+        "Senior taxi Valmez pokračuje, mění provoz i objednání služby",
       publication: "valasskezpravy.cz",
       date: "Prosinec 2025",
       url: "https://valasskezpravy.cz/aktuality/senior-taxi-valmez-pokracuje-meni-provoz-i-objednani-sluzby/",
     },
     {
       title: "Novinky v Senior taxi Valmez",
-      publication: "Valašské Meziříčí - oficální web",
+      publication: "Valašské Meziříčí – oficiální web",
       date: "Prosinec 2025",
       url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680",
     },
@@ -30,14 +37,16 @@ export function Media() {
       url: "https://polar.cz/index.php/zpravy/ostrava/ostrava-poruba/11000047942/senior-expres-poruba-ma-za-sebou-rekordni-rok-taxiky-najezdily-pres-62-000-km?cmpscreen",
     },
     {
-      title: "Senior Expres Poruba má za sebou rekordní rok. Taxíky najezdily přes 62 000 km",
+      title:
+        "Senior Expres Poruba má za sebou rekordní rok. Taxíky najezdily přes 62 000 km",
       publication: "Polar TV",
       date: "Březen 2025",
-      url: "https://polar.cz/zpravy/ostrava/ostrava-mesto/11000047901/senior-expres-poruba-ma-za-sebou-rekordni-rok-taxiky-najezdily-pres-62-000-km?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu",
+      url: "https://polar.cz/zpravy/ostrava/ostrava-mesto/11000047901/senior-expres-poruba-ma-za-sebou-rekordni-rok-taxiky-najezdily-pres-62-000-km",
     },
     {
-      title: "O senior taxi je v Porubě zájem mezi klienty i mezi řidiči",
-      publication: "MORAVSKOSLEZSKÝ deník.cz",
+      title:
+        "O senior taxi je v Porubě zájem mezi klienty i mezi řidiči",
+      publication: "Moravskoslezský deník",
       date: "Únor 2025",
       url: "https://moravskoslezsky.denik.cz/zpravy_region/ostrava-poruba-senior-taxi-sluzba-klienti-ridici-doprava-20250226.html",
     },
@@ -48,12 +57,14 @@ export function Media() {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + articles.length) % articles.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + articles.length) % articles.length
+    );
   };
 
   const getVisibleArticles = () => {
     const visible = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i =\[0\]; i < 3; i++) {
       visible.push(articles[(currentSlide + i) % articles.length]);
     }
     return visible;
@@ -64,8 +75,14 @@ export function Media() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kde o nás psali?
+            Média o službě Senior Taxi
           </h2>
+
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            O fungování služby Senior Taxi pravidelně informují regionální
+            i celostátní média. Přinášíme výběr článků a reportáží, které mapují provoz,
+            rozvoj služby a zkušenosti jednotlivých měst a obcí.
+          </p>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
@@ -75,7 +92,11 @@ export function Media() {
             aria-label="Předchozí články"
             type="button"
           >
-            <ChevronLeft className="text-blue-600" size={24} />
+            <ChevronLeft
+              className="text-blue-600"
+              size={24}
+              aria-hidden="true"
+            />
           </button>
 
           <div className="grid md:grid-cols-3 gap-6 px-4">
@@ -85,14 +106,20 @@ export function Media() {
                 className="bg-gray-50 p-6 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition"
               >
                 <div className="flex items-center gap-2 text-blue-600 mb-3">
-                  <Newspaper size={20} />
+                  <Newspaper size={20} aria-hidden="true" />
                   <span className="font-semibold text-sm">
                     {article.publication}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold mb-3">{article.title}</h3>
+
+                <h3 className="text-lg font-bold mb-3">
+                  {article.title}
+                </h3>
+
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{article.date}</span>
+                  <span className="text-sm text-gray-500">
+                    {article.date}
+                  </span>
                   <a
                     href={article.url}
                     className="text-blue-600 hover:text-blue-700 flex items-center gap-1 text-sm"
@@ -100,7 +127,7 @@ export function Media() {
                     rel="noopener noreferrer"
                   >
                     Číst
-                    <ExternalLink size={16} />
+                    <ExternalLink size={16} aria-hidden="true" />
                   </a>
                 </div>
               </div>
@@ -113,7 +140,11 @@ export function Media() {
             aria-label="Další články"
             type="button"
           >
-            <ChevronRight className="text-blue-600" size={24} />
+            <ChevronRight
+              className="text-blue-600"
+              size={24}
+              aria-hidden="true"
+            />
           </button>
         </div>
       </div>
