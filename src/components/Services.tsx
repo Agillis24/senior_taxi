@@ -37,11 +37,7 @@ export function Services() {
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Zajišťujeme bezpečnou a spolehlivou dopravu seniorů pro běžné i
-            důležité životní situace.
-          </p>
-
-          <p className="text-sm text-gray-500 mt-6">
-            Dopravu přizpůsobujeme zdravotnímu stavu, tempu i konkrétním potřebám
+            důležité životní situace. Dopravu přizpůsobujeme zdravotnímu stavu, tempu i konkrétním potřebám
             každého klienta.
           </p>
         </div>
