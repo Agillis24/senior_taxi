@@ -26,7 +26,10 @@ export function Clients() {
             Partneři služby Senior Taxi
           </h2>
 
-          <div className="max-w-3xl mx-auto text-gray-600 space-y-4 md:space-y-6">
+          {/* TEST: pokud se toto na webu neukáže, nenasazuje se nová verze */}
+          <p className="text-xs text-red-600 mt-4">TEST-CLIENTS-20260204</p>
+
+          <div className="max-w-3xl mx-auto text-gray-600 space-y-4 md:space-y-6 mt-4">
             <p className="text-lg">
               Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
               dopravu pro seniory. Spolupráce je nastavitelná podle potřeb
