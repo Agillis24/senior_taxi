@@ -4,7 +4,7 @@ export function Clients() {
       name: "Město Valašské Meziříčí",
       logo: new URL("../assets/valmez.png", import.meta.url).href,
       phone: "+420 775 896 947",
-      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680", // uprav na přesný odkaz, pokud chceš jiný
+      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680",
     },
     {
       name: "Centrum sociálních služeb Jih",
@@ -14,30 +14,30 @@ export function Clients() {
       name: "Městský obvod Ostrava - Poruba",
       logo: new URL("../assets/poruba.png", import.meta.url).href,
       phone: "+420 602 872 003",
-      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba", // uprav na přesný odkaz, pokud chceš jiný
+      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba",
     },
   ];
 
   return (
     <section id="klienti" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-14 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
             Partneři služby Senior Taxi
           </h2>
 
-          <div className="max-w-3xl mx-auto text-gray-600">
+          <div className="max-w-2xl mx-auto text-gray-600">
             <p className="text-lg leading-relaxed">
               Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
               dopravu pro seniory.
             </p>
 
-            <p className="text-lg leading-relaxed mt-3 md:mt-4">
+            <p className="text-lg leading-relaxed mt-4 md:mt-5">
               Spolupráce je nastavitelná podle potřeb obce – s důrazem na
               transparentní evidenci a spolehlivý provoz.
             </p>
 
-            <p className="text-sm text-gray-500 mt-4 md:mt-5">
+            <p className="text-sm text-gray-500 mt-6 md:mt-7">
               Zajímá vás spolupráce? Ozvěte se nám přes stránku Kontakt.
             </p>
           </div>
