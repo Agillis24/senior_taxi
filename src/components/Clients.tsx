@@ -32,7 +32,7 @@ export function Clients() {
             s důrazem na transparentní evidenci a spolehlivý provoz.
           </p>
 
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-gray-500 mt-6 md:mt-7">
             Zajímá vás spolupráce? Ozvěte se nám přes náš níže uvedený Kontaktní formulář.
           </p>
         </div>
