@@ -21,26 +21,20 @@ export function Clients() {
   return (
     <section id="klienti" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Partneři služby Senior Taxi
           </h2>
 
-          <div className="max-w-2xl mx-auto text-gray-600">
-            <p className="text-lg leading-relaxed">
-              Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
-              dopravu pro seniory.
-            </p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
+            dopravu pro seniory. Spolupráce je nastavitelná podle potřeb obce –
+            s důrazem na transparentní evidenci a spolehlivý provoz.
+          </p>
 
-            <p className="text-lg leading-relaxed mt-4 md:mt-5">
-              Spolupráce je nastavitelná podle potřeb obce – s důrazem na
-              transparentní evidenci a spolehlivý provoz.
-            </p>
-
-            <p className="text-sm text-gray-500 mt-6 md:mt-7">
-              Zajímá vás spolupráce? Ozvěte se nám přes stránku Kontakt.
-            </p>
-          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            Zajímá vás spolupráce? Ozvěte se nám přes stránku Kontakt.
+          </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -55,42 +49,3 @@ export function Clients() {
                 />
 
                 <p className="text-sm text-gray-600 text-center font-medium">
-                  {client.name}
-                </p>
-
-                {client.phone && (
-                  <a
-                    href={`tel:${client.phone.replace(/\s+/g, "")}`}
-                    className="mt-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {client.phone}
-                  </a>
-                )}
-              </div>
-            );
-
-            return client.url ? (
-              <a
-                key={client.name}
-                href={client.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
-              >
-                {CardInner}
-              </a>
-            ) : (
-              <div
-                key={client.name}
-                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
-              >
-                {CardInner}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
