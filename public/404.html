@@ -7,18 +7,12 @@
     <title>Načítám…</title>
     <script>
       (function () {
-        // current path, query and hash
         var path = window.location.pathname;
         var search = window.location.search || "";
         var hash = window.location.hash || "";
 
-        // Avoid infinite loops if we are already at /
-        if (path === "/" || path === "") {
-          return;
-        }
+        if (path === "/" || path === "") return;
 
-        // Encode original URL into query param "p"
-        // Example: /kontakt?x=1#y -> /?p=%2Fkontakt%3Fx%3D1%23y
         var original = path + search + hash;
         var target = "/?p=" + encodeURIComponent(original);
 
