@@ -32,18 +32,6 @@ export function Clients() {
             města/obce/organizace – s důrazem na transparentní evidenci a
             spolehlivý provoz.
           </p>
-
-          {/* CTA blok – větší vizuální odstup + jemný oddělovač */}
-          <div className="mt-8 md:mt-10">
-            <div className="flex justify-center">
-              <span className="block h-px w-24 bg-gray-200" />
-            </div>
-
-            <p className="text-sm text-gray-500 mt-6">
-              Zajímá vás spolupráce? Ozvěte se nám přes náš níže uvedený
-              Kontaktní formulář.
-            </p>
-          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
