@@ -1,28 +1,34 @@
 export function HowItWorks() {
   const steps = [
     {
-      title: "Zákazník objedná jízdu",
-      description: "Telefonicky vy nebo rodina – domluvíme čas i místo.",
+      title: "Objednání jízdy",
+      description:
+        "Telefonicky – senior, rodina nebo objednávající instituce domluví čas i místo.",
     },
     {
-      title: "Řidič přijede včas",
-      description: "Na domluvené místo, bez zbytečného čekání.",
+      title: "Včasný příjezd řidiče",
+      description:
+        "Řidič přijede na domluvené místo bez zbytečného čekání.",
     },
     {
       title: "Sledování jízdy v GPS",
-      description: "Objednatel (instituce) má k dispozici všechny jízdy ke sledování.",
+      description:
+        "Objednatel (město, obec nebo organizace) má přehled o všech uskutečněných jízdách.",
     },
     {
-      title: "Drobné doplatky snadno",
-      description: "Hotově nebo kartou – jednoduše a bezpečně.",
+      title: "Snadné drobné doplatky",
+      description:
+        "Platba hotově nebo kartou – jednoduše a bezpečně.",
     },
     {
       title: "Automatická evidence jízd",
-      description: "Každá jízda se uloží do elektronické knihy.",
+      description:
+        "Každá jízda se automaticky ukládá do elektronické knihy.",
     },
     {
-      title: "Měsíční fakturace",
-      description: "Přehledné vyúčtování pro objednatele (instituci).",
+      title: "Měsíční vyúčtování",
+      description:
+        "Přehledná fakturace pro objednatele služby.",
     },
   ];
 
@@ -31,10 +37,11 @@ export function HowItWorks() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Jak senior taxi funguje?
+            Jak funguje služba Senior Taxi
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Jednoduchý proces od objednávky po vyúčtování
+            Od jednoduchého objednání až po přehledné vyúčtování pro obce
+            a organizace.
           </p>
         </div>
 
@@ -50,8 +57,12 @@ export function HowItWorks() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                      <p className="text-gray-600 text-sm">{step.description}</p>
+                      <h3 className="font-bold text-lg mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        {step.description}
+                      </p>
                     </div>
                   </div>
                 </div>
