@@ -32,10 +32,17 @@ export function Services() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kam Vás odvezeme?
+            Služby Senior Taxi
           </h2>
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Komplexní dopravní pomoc pro každodenní i důležité cesty.
+            Zajišťujeme bezpečnou a spolehlivou dopravu seniorů pro běžné i
+            důležité životní situace.
+          </p>
+
+          <p className="text-sm text-gray-500 mt-6">
+            Dopravu přizpůsobujeme zdravotnímu stavu, tempu i konkrétním potřebám
+            každého klienta.
           </p>
         </div>
 
@@ -48,7 +55,7 @@ export function Services() {
                 className="bg-blue-50 p-6 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition"
               >
                 <div className="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="text-white" size={28} />
+                  <Icon className="text-white" size={28} aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
