@@ -58,7 +58,6 @@ const SEO: Record<string, { title: string; description: string; canonical: strin
 };
 
 function normalizePath(pathname: string) {
-  // sjednotíme /klienti/ -> /klienti (Google nemá rád duplicity)
   if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
   return pathname;
 }
@@ -67,7 +66,6 @@ export function OnePage({ sectionId }: Props) {
   const location = useLocation();
   const path = normalizePath(location.pathname);
 
-  // fallback na homepage
   const meta = SEO[path] ?? SEO["/"];
 
   useEffect(() => {
@@ -88,16 +86,19 @@ export function OnePage({ sectionId }: Props) {
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta name="robots" content="index,follow" />
 
-        {/* canonical sjednocený */}
         <link rel="canonical" href={meta.canonical} />
 
-        {/* OG/Twitter */}
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:url" content={meta.canonical} />
+        <meta property="og:image" content={`${DOMAIN}/og.jpg`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={`${DOMAIN}/og.jpg`} />
       </Helmet>
 
       <Header />
