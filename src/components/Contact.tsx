@@ -44,7 +44,7 @@ export function Contact() {
               </a>
             </div>
 
-            <p className="text-blue-100/90 text-sm mt-5">
+            <p className="text-blue-100/90 text-sm mt-8">
               Nebo nám rovnou napište, kde chcete službu zavést (město/obec/organizace).
             </p>
           </div>
