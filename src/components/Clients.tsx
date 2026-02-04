@@ -26,18 +26,17 @@ export function Clients() {
             Partneři služby Senior Taxi
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
-            dopravu pro seniory. Spolupráce je nastavitelná podle potřeb
-            města, obce nebo organizace – s důrazem na transparentní
-            evidenci a spolehlivý provoz.
-          </p>
+          <div className="max-w-3xl mx-auto text-gray-600 space-y-4 md:space-y-6">
+            <p className="text-lg">
+              Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
+              dopravu pro seniory. Spolupráce je nastavitelná podle potřeb
+              města/obce/organizace – s důrazem na transparentní evidenci a
+              spolehlivý provoz.
+            </p>
 
-          {/* CTA blok – vědomě oddělený */}
-          <div className="mt-6 md:mt-8">
             <p className="text-sm text-gray-500">
               Zajímá vás spolupráce? Ozvěte se nám přes náš níže uvedený
-              kontaktní formulář.
+              Kontaktní formulář.
             </p>
           </div>
         </div>
