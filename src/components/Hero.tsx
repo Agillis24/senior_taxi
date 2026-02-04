@@ -19,18 +19,15 @@ export function Hero() {
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight || 1;
 
-      // vzdálenost středu hero od středu viewportu (v px)
       const heroCenter = rect.top + rect.height / 2;
       const viewCenter = vh / 2;
       const dist = heroCenter - viewCenter;
 
-      // normalizace do intervalu -1..1 (když je hero daleko, clamp)
       const t = clamp(dist / (vh * 0.9), -1, 1);
 
-      // t = 0 když je hero uprostřed; při scrollu nahoru/dolů se mění plynule
-      const y = -t * 18; // parallax (px)
-      const scale = 1 + (1 - Math.abs(t)) * 0.03; // největší uprostřed
-      const opacity = 0.9 + (1 - Math.abs(t)) * 0.1; // 0.9..1
+      const y = -t * 18;
+      const scale = 1 + (1 - Math.abs(t)) * 0.03;
+      const opacity = 0.9 + (1 - Math.abs(t)) * 0.1;
 
       setFx({ y, scale, opacity });
     };
@@ -78,19 +75,23 @@ export function Hero() {
           {/* Text – na mobilu druhý */}
           <div className="order-2 md:order-1">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              SENIOR TAXI OSTRAVA
+              Senior Taxi Ostrava
             </h1>
 
-            <p className="text-sm md:text-base text-gray-600 mb-8 whitespace-nowrap">
-              Budujeme spolehlivou dopravu pro seniory s důrazem na bezpečí a
-              lidský přístup.
+            <p className="text-lg text-gray-600 mb-4 max-w-xl">
+              Bezpečná a spolehlivá doprava seniorů v Ostravě a okolí.
+            </p>
+
+            <p className="text-sm md:text-base text-gray-500 mb-8 max-w-xl">
+              S důrazem na lidský přístup, transparentní evidenci jízd a
+              spolehlivý provoz pro města a organizace.
             </p>
 
             <a
               href="tel:+420608771144"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-12 py-5 rounded-lg hover:bg-blue-700 transition gap-3 text-lg font-semibold shadow-lg"
             >
-              <Phone size={24} />
+              <Phone size={24} aria-hidden="true" />
               +420 608 771 144
             </a>
           </div>
