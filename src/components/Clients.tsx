@@ -28,13 +28,18 @@ export function Clients() {
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Pomáháme samosprávám a sociálním organizacím provozovat dostupnou
-            dopravu pro seniory. Spolupráce je nastavitelná podle potřeb města/obce/organizace –
-            s důrazem na transparentní evidenci a spolehlivý provoz.
+            dopravu pro seniory. Spolupráce je nastavitelná podle potřeb
+            města, obce nebo organizace – s důrazem na transparentní
+            evidenci a spolehlivý provoz.
           </p>
 
-          <p className="text-sm text-gray-500 mt-6 md:mt-7">
-            Zajímá vás spolupráce? Ozvěte se nám přes náš níže uvedený Kontaktní formulář.
-          </p>
+          {/* CTA blok – vědomě oddělený */}
+          <div className="mt-6 md:mt-8">
+            <p className="text-sm text-gray-500">
+              Zajímá vás spolupráce? Ozvěte se nám přes náš níže uvedený
+              kontaktní formulář.
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
