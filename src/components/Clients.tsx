@@ -1,10 +1,16 @@
+import { useLocation } from "react-router-dom";
+
 export function Clients() {
+  const location = useLocation();
+  const isClientsRoute =
+    location.pathname === "/klienti" || location.pathname === "/klienti/";
+
   const clients = [
     {
       name: "Město Valašské Meziříčí",
       logo: new URL("../assets/valmez.png", import.meta.url).href,
       phone: "+420 775 896 947",
-      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680", // uprav na přesný odkaz, pokud chceš jiný
+      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680",
     },
     {
       name: "Centrum sociálních služeb Jih",
@@ -14,7 +20,7 @@ export function Clients() {
       name: "Městský obvod Ostrava - Poruba",
       logo: new URL("../assets/poruba.png", import.meta.url).href,
       phone: "+420 602 872 003",
-      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba", // uprav na přesný odkaz, pokud chceš jiný
+      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba",
     },
   ];
 
@@ -22,13 +28,39 @@ export function Clients() {
     <section id="klienti" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kdo jsou naši klienti?
-          </h2>
+          {isClientsRoute && (
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Naši klienti a spolupracující města
+            </h1>
+          )}
+
+          {!isClientsRoute && (
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Kdo jsou naši klienti?
+            </h2>
+          )}
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Spolupracujeme s organizacemi, které kladou důraz na kvalitu péče,
-            bezpečí a spolehlivost.
+            Spolupracujeme s městy, městskými obvody a organizacemi, které kladou
+            důraz na kvalitu péče, bezpečí a spolehlivost přepravy seniorů.
           </p>
+
+          {isClientsRoute && (
+            <div className="mt-6 max-w-3xl mx-auto text-left text-gray-700 leading-relaxed space-y-3">
+              <p>
+                Naši partneři využívají Senior Taxi jako praktickou službu pro
+                občany – zejména pro cesty k lékaři, na úřady, na nákupy nebo na
+                společenské aktivity. Spolupráce je vhodná pro samosprávy i
+                sociální organizace, které chtějí mít dopravu seniorů pod
+                kontrolou a zároveň zachovat lidský přístup.
+              </p>
+              <p>
+                Důležitý je pro nás jednoduchý proces objednání, spolehlivost a
+                transparentní evidence jízd. Pokud chcete Senior Taxi zavést i u
+                vás, ozvěte se nám – rádi vysvětlíme možnosti nastavení služby.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
