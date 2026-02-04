@@ -4,7 +4,7 @@ export function Clients() {
       name: "Město Valašské Meziříčí",
       logo: new URL("../assets/valmez.png", import.meta.url).href,
       phone: "+420 775 896 947",
-      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680",
+      url: "https://www.valasskemezirici.cz/novinky-v-senior-taxi-valmez/d-59680", // uprav na přesný odkaz, pokud chceš jiný
     },
     {
       name: "Centrum sociálních služeb Jih",
@@ -14,7 +14,7 @@ export function Clients() {
       name: "Městský obvod Ostrava - Poruba",
       logo: new URL("../assets/poruba.png", import.meta.url).href,
       phone: "+420 602 872 003",
-      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba",
+      url: "https://poruba.ostrava.cz/cs/o-porube/senior-expres-poruba", // uprav na přesný odkaz, pokud chceš jiný
     },
   ];
 
@@ -31,36 +31,29 @@ export function Clients() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-3">
           {clients.map((client) => {
-            const CardContent = (
-              <div className="bg-white p-6 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition h-full">
-                {/* Logo box ve stylu Services (badge) */}
-                <div className="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-10 h-10 object-contain"
-                    loading="lazy"
-                  />
-                </div>
+            const CardInner = (
+              <div className="flex flex-col items-center justify-center h-44 md:h-48">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-20 md:h-24 lg:h-28 w-auto object-contain mb-4"
+                  loading="lazy"
+                />
 
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
+                <p className="text-sm text-gray-600 text-center font-medium">
                   {client.name}
-                </h3>
+                </p>
 
-                {client.phone ? (
+                {client.phone && (
                   <a
                     href={`tel:${client.phone.replace(/\s+/g, "")}`}
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
+                    className="mt-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {client.phone}
                   </a>
-                ) : (
-                  <p className="text-gray-600">
-                    Partner služby Senior Taxi
-                  </p>
                 )}
               </div>
             );
@@ -71,12 +64,17 @@ export function Clients() {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block"
+                className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
               >
-                {CardContent}
+                {CardInner}
               </a>
             ) : (
-              <div key={client.name}>{CardContent}</div>
+              <div
+                key={client.name}
+                className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition"
+              >
+                {CardInner}
+              </div>
             );
           })}
         </div>
