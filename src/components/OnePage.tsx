@@ -20,7 +20,7 @@ const DOMAIN = "https://seniortaxiostrava.cz";
 
 const SEO: Record<string, { title: string; description: string; canonical: string }> = {
   "/": {
-    title: "Senior Taxi Ostrava | Bezpečná přeprava seniorů",
+    title: "Senior Taxi Ostrava | Doprava seniorů pro města a obce",
     description:
       "Bezpečná doprava seniorů v Ostravě a okolí. Spolehlivě, bezpečně a s respektem. Kontakt: info@seniortaxiostrava.cz.",
     canonical: `${DOMAIN}/`,
