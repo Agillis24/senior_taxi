@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -99,6 +99,29 @@ export function Footer() {
               <li className="flex items-start gap-2 text-gray-400">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <span>Krůčkova 359/7, Svinov, 721 00 Ostrava</span>
+              </li>
+
+              {/* Sociální sítě */}
+              <li className="flex items-center gap-3 text-gray-400 pt-2">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61587700792713&locale=cs_CZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                  aria-label="Facebook Senior Taxi Ostrava"
+                >
+                  <Facebook size={16} />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/taxiostrava/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                  aria-label="Instagram Senior Taxi Ostrava"
+                >
+                  <Instagram size={16} />
+                </a>
               </li>
             </ul>
           </div>
