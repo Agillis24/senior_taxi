@@ -10,10 +10,20 @@
       name="description"
       content="Senior Taxi Ostrava – pohodlná a bezpečná přeprava seniorů v regionu. Kontakt: info@seniortaxiostrava.cz."
     />
+    <meta
+      name="keywords"
+      content="senior taxi ostrava, doprava senioru, preprava senioru, senior taxi moravskoslezsky kraj, bezpecna doprava senioru"
+    />
     <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="author" content="Senior Taxi Ostrava" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Canonical (výchozí; na routách přepisuj přes Helmet) -->
     <link rel="canonical" href="https://seniortaxiostrava.cz/" />
+    <link rel="alternate" hrefLang="cs-CZ" href="https://seniortaxiostrava.cz/" />
+    <link rel="alternate" hrefLang="cs" href="https://seniortaxiostrava.cz/" />
+    <link rel="alternate" hrefLang="x-default" href="https://seniortaxiostrava.cz/" />
 
     <!-- Volitelné: barva pro mobilní UI -->
     <meta name="theme-color" content="#ffffff" />
@@ -41,6 +51,7 @@
       content="Pohodlná a bezpečná přeprava seniorů v regionu Ostrava. Kontakt: info@seniortaxiostrava.cz."
     />
     <meta name="twitter:image" content="https://seniortaxiostrava.cz/og.jpg" />
+    <meta name="twitter:url" content="https://seniortaxiostrava.cz/" />
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" />
@@ -49,14 +60,50 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://seniortaxiostrava.cz/#organization",
+            "name": "Senior Taxi Ostrava",
+            "url": "https://seniortaxiostrava.cz/",
+            "email": "info@seniortaxiostrava.cz",
+            "logo": "https://seniortaxiostrava.cz/og.jpg"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://seniortaxiostrava.cz/#website",
+            "url": "https://seniortaxiostrava.cz/",
+            "name": "Senior Taxi Ostrava",
+            "inLanguage": "cs-CZ",
+            "publisher": {
+              "@id": "https://seniortaxiostrava.cz/#organization"
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://seniortaxiostrava.cz/#localbusiness",
+            "name": "Senior Taxi Ostrava",
+            "url": "https://seniortaxiostrava.cz/",
+            "email": "info@seniortaxiostrava.cz",
+            "areaServed": "Moravskoslezský kraj",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CZ"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
         "name": "Senior Taxi Ostrava",
         "url": "https://seniortaxiostrava.cz/",
-        "email": "info@seniortaxiostrava.cz",
-        "areaServed": "Moravskoslezský kraj",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "CZ"
+        "inLanguage": "cs-CZ",
+        "description": "Senior Taxi Ostrava – pohodlná a bezpečná přeprava seniorů v regionu.",
+        "isPartOf": {
+          "@id": "https://seniortaxiostrava.cz/#website"
         }
       }
     </script>

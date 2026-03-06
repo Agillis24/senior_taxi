@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /*?p=*
 
 Sitemap: https://seniortaxiostrava.cz/sitemap.xml
 Host: seniortaxiostrava.cz
